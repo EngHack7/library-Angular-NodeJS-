@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<div style="height: max-content; margin-top: 53px;">
+    <div class="drop">
+        <label for="tag">Select tag</label>
+        <select id="tag" class="tag-select" (change)="SelectTagHandler($event)">
+            <option *ngFor="let tag of tags" [value]="tag.tag_Name" selected> {{tag.tag_Name}} </option>
+          </select>
+    </div>
+    <div class="drop">
+        <label for="auther">Select Auther</label>
+        <select id="auther" class="tag-select" (change)="SelectAutherHandler($event)">
+            <option *ngFor="let auther of authers" [value]="auther.auther_Name" selected> {{auther.auther_Name}} </option>
+          </select>
+    </div>
+
+    <div style="display: inline-block; height: max-content;">
+        <input #title type="text" placeholder="Book Title"/>
+    </div>
+   <button  style="margin-left: 40px;" type="submit" (click) = "onSubmit(title.value)"> search </button>
+</div>
+<div *ngFor="let book of books" class="item">
+    <div class="image">
+      <img class="image" [src]="source+book.image_URL" alt="no img for this book">
+      <div class="deadline">
+        {{book.title}}
+      </div>
+      <div class="deadline">
+        {{book.auther_Name}}
+      </div>
+ </div> 
+
+  
+    
+     
+   
+  
+  
+
+
+
+

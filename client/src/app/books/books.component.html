@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<body>
+  <div>
+    <div class="add"><table style="margin-left: 70%;"> <td>
+      <button class="btn btn-primary" style="display: inline;display: inline-block;" (click) = "Sort()">sort</button>
+
+    </td><td >
+      <button class="btn btn-primary" (click) ="HandelAdd()" style="   margin-left: 93%; display: inline-block;
+      height: 40px; width: max-content;" >new book</button>
+    </td></table>
+    
+    </div>
+   </div>
+   <table id="customers">
+     <tr>
+       <th>book id</th>
+       <th>book title</th>
+       <th>description</th>
+       <th>Auther</th>
+       <th>Tags</th>
+       <th>image</th>
+      <th>action</th>
+     </tr>
+     <tr *ngFor= "let book of books " @fade >
+       <td>{{book.id}}</td>
+       <td>{{book.title}}</td>
+       <td>{{book.description}}</td>
+       <td>{{book.auther_Name}}</td>
+       <td>{{book.tag_Name}}</td>
+      
+       <td><img [src]="source+book.image_URL" style="width: 52px; height:52px; margin: 2px;" /></td>
+       <td><button class="btn btn-danger" (click)= "openConfirmationDialog(book)" style="background-color: red; color: white;">delete</button>
+       <button class="btn btn-primary" (click) = "HandleUpdate(book.id,book.title,book.description,book.tag_Name)">update</button>
+       </td>
+     </tr>
+   
+   </table>
+  
+   
+</body>

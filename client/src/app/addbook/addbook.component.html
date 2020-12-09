@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<body>
+  <div class="contact-us">
+    <form>
+      <input class="input" #title placeholder="title" type="text" />
+      <input class="input" #desc placeholder="description" type="text" />
+      <div class="selectdiv">
+        <label>
+          <select (change)="selectChangeHandler($event)">
+            <option *ngFor="let auther of authers" [value]="auther.id" selected> {{auther.auther_Name}} </option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <ejs-multiselect  id='localData' #local [dataSource]='tags' [fields]='localFields'
+          [placeholder]='localWaterMark'>
+        </ejs-multiselect>
+      </div>
+      <div>
+        <input (change)="onImageChange($event)" #image type="file" accept="image/*">
+        <img [src]="image" alt="no image">
+        <button (click)="HandleAdd(title.value,desc.value,local.value )"> Add </button>
+      </div>
+    </form>
+  </div>
+</body>

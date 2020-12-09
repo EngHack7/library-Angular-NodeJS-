@@ -1,0 +1,43 @@
+ .item{
+            width: 265px;
+            height: 288px;
+            border: 0.1px  solid black;
+            margin: 18px;
+            display: inline-block;
+            box-shadow: 3px 4px dimgrey;
+        }
+        .image{
+            width: 237px;
+            height: 191px;
+            margin: auto;
+        }
+        .deadline{
+            margin: auto;
+            font-size: large;
+           padding: 2px;
+           margin-top: 2.5px;
+        }
+        
+
+.drop{
+  display: inline-block;
+  width: 150px;
+  margin: 0px 9px;
+  display: inline-block;
+}
+
+.tag-select{
+    width: 100%;
+    height: 41px;
+}
+    
+.selectdiv {
+    position: relative;
+    /*Don't really need this just for demo styling*/
+    
+    float: left;
+    min-width: 200px;
+    margin-bottom: 21px;
+  }
+  
+    

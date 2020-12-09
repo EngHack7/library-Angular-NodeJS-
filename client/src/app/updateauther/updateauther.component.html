@@ -1,0 +1,11 @@
+
+<app-navbar></app-navbar>
+<body>
+    
+<div class="contact-us">
+    <form>
+      <input #authN [(ngModel)]="autherName" [ngModelOptions]="{standalone: true}" placeholder="Auther Name" type="text" />
+      <button (click) = "HandleUpdate(authN.value)" type="button"> Add </button>
+    </form>
+  </div>
+</body>

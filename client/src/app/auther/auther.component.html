@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div>
+    <button class="topright" (click) ="HandelAdd()" style="background-color: greenyellow;margin-top: 40px;" >new auther</button>
+  </div>
+  <table id="customers">
+    <tr>
+      <th>auther id</th>
+      <th>auther Name</th>
+     <th>action</th>
+    </tr>
+    <tr *ngFor= "let auther of authers" @fade>
+      <td>{{auther.id}}</td>
+      <td>{{auther.auther_Name}}</td>
+      <td><button (click)= "HandleDelete(auther.id)" style="background-color: red; color: white;">delete</button>
+      <button (click) = "HandleUpdate(auther.id , auther.auther_Name)">update</button>
+      </td>
+    </tr>
+  
+  </table>
+  

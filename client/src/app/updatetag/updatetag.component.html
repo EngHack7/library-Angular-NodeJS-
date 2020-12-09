@@ -1,0 +1,11 @@
+
+
+<app-navbar></app-navbar>
+<body>
+<div class="contact-us">
+    <form>
+      <input  [(ngModel)]="tag_Name" [ngModelOptions]="{standalone: true}"  placeholder="tag Name" type="text" />
+      <button (click)="HandleUpdate()" type="button"> Add </button>
+    </form>
+  </div>
+</body>

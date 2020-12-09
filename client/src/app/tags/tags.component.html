@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div style="margin-top: 12px;">
+  <button class="btn btn-primary" (click) ="HandleNewTag()" style=" margin-top: 40px;  margin-left: 93%;
+height: 40px; width: max-content;" >new Tag</button>
+  <!-- <button style="background-color: greenyellow;margin-top: 40px; margin-left: 93%;" (click)="HandleNewTag()">new tag</button> -->
+</div>
+<table id="customers">
+  <tr>
+    <th>tag id</th>
+    <th>tag Name</th>
+    <th>action</th>
+  </tr>
+  <tr *ngFor= "let tag of tags">
+    <td>{{tag.id}}</td>
+    <td>{{tag.tag_Name}}</td>
+    <td><button  class="btn btn-danger" style="background-color: red; margin: 2px;"
+      (click)="openConfirmationDialog(tag)"
+      type="button" class="btn btn-primary"
+     
+      >delete</button>
+    <button class="btn btn-primary" (click) = "HandleUpdate(tag.id , tag.tag_Name)"  >update</button>
+    </td>
+  </tr>
+
+</table>
